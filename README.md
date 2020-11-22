@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 # Kendo UI
 
-It is used with kendo UI, do [ng add @progress/kendo-angular-grid] if missing packages
+It is used with kendo UI, do [ng add @progress/kendo-angular-grid](https://www.telerik.com/kendo-ui) if missing packages
 
 ## Development server
 
