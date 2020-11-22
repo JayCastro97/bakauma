@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
+# Kendo UI
+
+It is used with kendo UI, do [ng add @progress/kendo-angular-grid](https://www.telerik.com/kendo-ui) if missing packages
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

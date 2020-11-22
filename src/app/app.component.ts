@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,32 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bakauma';
+
+  public items: any[];
+
+    constructor(private router: Router) {
+        this.items = this.mapItems(router.config);
+    }
+
+    public onSelect({ item }): void {
+        if (!item.items) {
+            this.router.navigate([ item.path ]);
+        }
+    }
+
+    // convert the routes to menu items.
+    private mapItems(routes: any[], path?: string): any[] {
+        return routes.map(item => {
+            const result: any = {
+                text: item.text,
+                path: (path ? `${ path }/` : '') + item.path
+            };
+
+            if (item.children) {
+                result.items = this.mapItems(item.children, item.path);
+            }
+
+            return result;
+        });
+    }
 }
